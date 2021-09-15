@@ -16,7 +16,7 @@ const App = () => {
     const fetchItems = async () => {
       if(query==='') {
         const result = await axios(
-          `http://gateway.marvel.com/v1/public/characters?limit=20&ts=1&apikey=b75b3e36882f682bbfd481f1eac4c181&hash=${hash}`
+          `https://gateway.marvel.com/v1/public/characters?limit=20&ts=1&apikey=b75b3e36882f682bbfd481f1eac4c181&hash=${hash}`
           )
         console.log(result.data.data.results)
         setItems(result.data.data.results)
